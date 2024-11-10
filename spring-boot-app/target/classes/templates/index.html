@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"/>
+    <!-- Replace ${timestamp} with an actual timestamp or a valid parameter -->
+    <link data-th-href="@{/css/main.css?id=${timestamp}}" rel="stylesheet">
+    <title>Ultimate CI/CD Pipeline</title>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-md navbar-light fixed-top navbar-custom" style="background-color: lightgreen">
+    <a class="navbar-brand" href="#">Ultimate DevOps Project</a>
+</nav>
+
+<main role="main" class="container">
+    <div class="starter-template"><br><br>
+        <h1 th:text="${title}">Default title.</h1><br><br>
+        <img src="/Annimation.gif" alt="Automated Pipeline" width="100%" style="max-width: 1200px; height: auto;">
+        <p th:text="${msg}">Default text.</p>
+        <p th:text="${par1}">Default text for par-1 if it's not found.</p>
+        <p th:text="${par2}">Default text for par-2 if it's not found.</p>
+        <p th:text="${par3}">Default text for par-3 if it's not found.</p>
+        <p th:text="${par4}">Default text for par-4 if it's not found.</p>
+    </div>
+</main>
+
+<script data-th-src="@{/js/main.js}"></script>
+</body>
+</html>
